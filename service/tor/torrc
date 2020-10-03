@@ -1,11 +1,18 @@
+# Run as non-exit bridge relay
+SocksPort [::]:9050
 SOCKSPort 0.0.0.0:9050
 
 ORPort 9029
 DirPort 9030
-ExitRelay 0
+#ExitRelay 0
+
+BridgeRelay 1
+Exitpolicy reject *:*
+Exitpolicy reject6 *:*
 
 # open up dns resolving via tor
-DNSPort 53
+DNSPort 0.0.0.0:53
+DNSPort [::]:53
 
 BandwidthRate 2 MBytes
 BandwidthBurst 20 MBytes
