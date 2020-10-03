@@ -4,11 +4,14 @@ SOCKSPort 0.0.0.0:9050
 
 ORPort 9029
 DirPort 9030
-#ExitRelay 0
+ExitRelay 0
 
 BridgeRelay 1
 Exitpolicy reject *:*
 Exitpolicy reject6 *:*
+
+# Enable obfsproxy
+ServerTransportPlugin obfs3,scramblesuit exec /usr/bin/obfsproxy managed
 
 # open up dns resolving via tor
 DNSPort 0.0.0.0:53
