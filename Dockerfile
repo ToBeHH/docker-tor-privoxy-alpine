@@ -1,6 +1,6 @@
-FROM alpine:3.7
+FROM alpine:3.12
 
-EXPOSE 8118 9050
+EXPOSE 8118 9050 9029 9030 53
 
 RUN apk --update add privoxy tor runit tini
 
