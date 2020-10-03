@@ -1,1 +1,15 @@
 SOCKSPort 0.0.0.0:9050
+
+ORPort 9001
+DirPort 9030
+
+# open up dns resolving via tor
+DNSPort 53
+
+BandwidthRate 2 MBytes
+BandwidthBurst 20 MBytes
+
+RelayBandwidthRate 2 MBytes
+RelayBandwidthBurst 20 MBytes
+
+
