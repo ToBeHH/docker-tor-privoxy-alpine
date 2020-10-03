@@ -1,2 +1,5 @@
 listen-address 0.0.0.0:8118
 forward-socks5 / localhost:9050 .
+forward-socks4 / localhost:9050 .
+forward-socks4a / localhost:9050 .
+
