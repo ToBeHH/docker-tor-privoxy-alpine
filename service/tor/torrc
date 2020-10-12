@@ -4,7 +4,6 @@ SOCKSPort 0.0.0.0:9050
 
 ORPort 9029
 DirPort 9030
-ExitRelay 0
 
 BridgeRelay 1
 ExitPolicy reject *:* # no exits allowed
