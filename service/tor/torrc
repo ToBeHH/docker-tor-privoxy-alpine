@@ -7,8 +7,8 @@ DirPort 9030
 ExitRelay 0
 
 BridgeRelay 1
-Exitpolicy reject *:*
-Exitpolicy reject6 *:*
+ExitPolicy reject *:* # no exits allowed
+Exitpolicy reject6 *:* # no exits on IPv6 allowed
 
 # Enable obfsproxy
 ServerTransportPlugin obfs3,scramblesuit exec /usr/bin/obfsproxy managed
@@ -17,10 +17,10 @@ ServerTransportPlugin obfs3,scramblesuit exec /usr/bin/obfsproxy managed
 DNSPort 0.0.0.0:53
 DNSPort [::]:53
 
-BandwidthRate 2 MBytes
-BandwidthBurst 20 MBytes
+BandwidthRate 10 MBytes
+BandwidthBurst 40 MBytes
 
-RelayBandwidthRate 2 MBytes
-RelayBandwidthBurst 20 MBytes
+RelayBandwidthRate 10 MBytes
+RelayBandwidthBurst 40 MBytes
 
 
