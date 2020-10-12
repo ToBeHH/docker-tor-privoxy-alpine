@@ -1,2 +1,19 @@
 #!/bin/sh
+if [ "$TOR_ADDRESS" != "" ]; then
+	echo >> torrc "Address $TOR_ADDRESS"
+fi
+if [ "$BW" != "" ]; then
+	echo >> torrc "BandwidthRate $BW"
+fi
+if [ "$BWB" != "" ]; then
+	echo >> torrc "BandwidthBurst $BW"
+fi
+if [ "$RBW" != "" ]; then
+	echo >> torrc "RelayBandwidthRate $RBW"
+fi
+if [ "$RBWB" != "" ]; then
+	echo >> torrc "RelayBandwidthBurst $RBWB"
+fi
+cat torrc
+echo "------------------------"
 tor -f ./torrc
