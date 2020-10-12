@@ -8,6 +8,8 @@ DirPort 9030
 BridgeRelay 1
 ExitPolicy reject *:* # no exits allowed
 Exitpolicy reject6 *:* # no exits on IPv6 allowed
+PublishServerDescriptor 1   # published on bridge directory DB
+ExtORPort auto
 
 # Enable obfsproxy
 ServerTransportPlugin obfs3,scramblesuit exec /usr/bin/obfsproxy managed
@@ -22,4 +24,4 @@ BandwidthBurst 40 MBytes
 RelayBandwidthRate 10 MBytes
 RelayBandwidthBurst 40 MBytes
 
-
+AvoidDiskWrites 1
