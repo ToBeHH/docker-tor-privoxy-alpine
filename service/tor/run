@@ -19,6 +19,7 @@ if [ "$BWB" != "" ]; then
 fi
 if [ "$RBW" != "" ]; then
 	echo >> config "RelayBandwidthRate $RBW"
+	echo >> config "MaxAdvertisedBandwidth $RBW"
 fi
 if [ "$RBWB" != "" ]; then
 	echo >> config "RelayBandwidthBurst $RBWB"
