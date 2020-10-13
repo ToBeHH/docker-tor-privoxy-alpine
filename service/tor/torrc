@@ -5,7 +5,6 @@ SOCKSPort 0.0.0.0:9050
 ORPort 9029
 DirPort 9030
 
-BridgeRelay 1
 ExitPolicy reject *:* # no exits allowed
 Exitpolicy reject6 *:* # no exits on IPv6 allowed
 PublishServerDescriptor 1   # published on bridge directory DB
