@@ -1,19 +1,20 @@
 #!/bin/sh
+cp torrc config
 if [ "$TOR_ADDRESS" != "" ]; then
-	echo >> torrc "Address $TOR_ADDRESS"
+	echo >> config "Address $TOR_ADDRESS"
 fi
 if [ "$BW" != "" ]; then
-	echo >> torrc "BandwidthRate $BW"
+	echo >> config "BandwidthRate $BW"
 fi
 if [ "$BWB" != "" ]; then
-	echo >> torrc "BandwidthBurst $BW"
+	echo >> config "BandwidthBurst $BW"
 fi
 if [ "$RBW" != "" ]; then
-	echo >> torrc "RelayBandwidthRate $RBW"
+	echo >> config "RelayBandwidthRate $RBW"
 fi
 if [ "$RBWB" != "" ]; then
-	echo >> torrc "RelayBandwidthBurst $RBWB"
+	echo >> config "RelayBandwidthBurst $RBWB"
 fi
-cat torrc
+cat config
 echo "------------------------"
-tor -f ./torrc
+tor -f ./config
