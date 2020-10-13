@@ -17,8 +17,8 @@ ServerTransportPlugin obfs3,scramblesuit exec /usr/bin/obfsproxy managed
 # open up dns resolving via tor
 DNSPort 0.0.0.0:53
 DNSPort [::]:53
-CacheDNS
-UseDNSCache
+# CacheDNS
+# UseDNSCache
 
 BandwidthRate 10 MBytes
 BandwidthBurst 40 MBytes
@@ -27,5 +27,5 @@ RelayBandwidthRate 10 MBytes
 RelayBandwidthBurst 40 MBytes
 
 # Make it more docker friendly
-DisableAllSwap 1
+# DisableAllSwap 1
 AvoidDiskWrites 1
