@@ -5,6 +5,7 @@ SOCKSPort 0.0.0.0:9050
 ORPort 9029
 DirPort 9030
 
+BrideRelay 0 # So that it acts like a middle relay
 ExitPolicy reject *:* # no exits allowed
 Exitpolicy reject6 *:* # no exits on IPv6 allowed
 PublishServerDescriptor 1   # published on bridge directory DB
@@ -16,6 +17,8 @@ ServerTransportPlugin obfs3,scramblesuit exec /usr/bin/obfsproxy managed
 # open up dns resolving via tor
 DNSPort 0.0.0.0:53
 DNSPort [::]:53
+CacheDNS
+UseDNSCache
 
 BandwidthRate 10 MBytes
 BandwidthBurst 40 MBytes
@@ -23,4 +26,6 @@ BandwidthBurst 40 MBytes
 RelayBandwidthRate 10 MBytes
 RelayBandwidthBurst 40 MBytes
 
+# Make it more docker friendly
+DisableAllSwap 1
 AvoidDiskWrites 1
