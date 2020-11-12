@@ -5,7 +5,7 @@ SOCKSPort 0.0.0.0:9050
 ORPort 9029
 DirPort 9030
 
-BrideRelay 0 # So that it acts like a middle relay
+# This causes a conflict: BrideRelay 0 # So that it acts like a middle relay
 ExitPolicy reject *:* # no exits allowed
 Exitpolicy reject6 *:* # no exits on IPv6 allowed
 PublishServerDescriptor 1   # published on bridge directory DB
