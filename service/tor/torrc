@@ -20,6 +20,10 @@ DNSPort [::]:53
 # CacheDNS
 # UseDNSCache
 
+# Used by Nyx to control tor
+ControlPort 9051
+CookieAuthentication 1
+
 BandwidthRate 10 MBytes
 BandwidthBurst 40 MBytes
 

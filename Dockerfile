@@ -3,7 +3,7 @@ FROM alpine:3.12
 EXPOSE 8118 9050 9029 9030 53
 
 # Install basic packages
-RUN apk --update add privoxy tor runit tini
+RUN apk --update add privoxy tor runit tini nyx
 # Install obfsproxy
 RUN set -xe \
     && apk add --no-cache build-base curl python3 python3-dev \
