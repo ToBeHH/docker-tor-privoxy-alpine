@@ -2,8 +2,10 @@
 SocksPort [::]:9050
 SOCKSPort 0.0.0.0:9050
 
+# Don't check on IPv6, since docker can't handle it
 ORPort 9029 IPv4Only
 DirPort 9030
+# Tunneling port for HTTP CONNECT proxy
 HTTPTunnelPort 9080
 
 # This causes a conflict: BrideRelay 0 # So that it acts like a middle relay
