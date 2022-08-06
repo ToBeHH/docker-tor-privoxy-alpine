@@ -2,8 +2,9 @@
 SocksPort [::]:9050
 SOCKSPort 0.0.0.0:9050
 
-ORPort 9029
+ORPort 9029 IPv4Only
 DirPort 9030
+HTTPTunnelPort 9080
 
 # This causes a conflict: BrideRelay 0 # So that it acts like a middle relay
 ExitPolicy reject *:* # no exits allowed
